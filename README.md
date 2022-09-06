@@ -27,20 +27,20 @@ Performance Metric:
 
 
 ### Confustion Matrix
-Confusion Matrix - Multi-Classification
-Positive = Uqniue Cell Type
-Negative = Mixed Cell Type
+Confusion Matrix:
+   - In a Multi-Classification where the confusion matrix columns are predicted cell types and the rows are actual cell type labels. The values in the row vectors are the counts of times the class was identified by the model. 
+   - Cell types labels: Cell_Type1, Cell_Type2, Cell_Type3, Cell_Type4
 
-- True Positive
+- True Positive:
   - We predict an cell as a cell in a trajectory and it is that cell type in that trajectory 
   - The True positive value is where the actual value and predicted value are the same.
-- False Positive
+- False Positive:
   - We predict an cell is a type that is not in a trajectory that is its true traj. 
-  - The False-positive value for a class will be the sum of values of the corresponding column except for the TP value.
+  - In a MC, the False positive value for a class will be the sum of values of the corresponding class column except for the TP value.
   - In research, particularly targeted medicine, we would target the wrong cell type.
-- False Negative
+- False Negative:
   - The model has given the wrong prediction, It was supposed to give a positive(cell type) but it has given a negative(cell type) therefore any negative output is false.
   - The False-negative value for a class will be the sum of values of corresponding rows except for the TP value.
-- True Negative
-  `- The True Negative value for a class will be the sum of values of all columns and rows except the values of that class that we are calculating the values for.
+- True Negative:
+  - The True Negative value for a class will be the sum of values of all columns and rows except the values of that class that we are calculating the values for.
  
