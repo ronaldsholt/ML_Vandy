@@ -9,10 +9,16 @@ Project Description:
 - Using representation learning as low dimentional input to higher dimentional reduction clustering tools like TSNE or UMAP to learn cell lineage. Also evaluate against traditional methods like PCA or Logistic PCA.
 
 - Steps in the process:
--- Hello
+1. Build encoder, decoder networks.
+2. Train model on individual cell type RNAseq data.
+3. Minimize objectively for MSE where train_data = {train_, train_}
+4. Encoder instantiated seperatedly for classification
+5. Use encoded RNAseq data to classify cell types
+6. Use embedded latent vectors as input to TSNE/UMAP for further trajectory analysis
 
 Performance Metric:
-- Min{L2-norm/MSE}
+- Reconstruction Error: Min{L2-norm/MSE}
+- Encoder classification: Confusion Maxtrix: Accuracy Report
 
 ## Description of Metrics:
 
@@ -21,3 +27,16 @@ Performance Metric:
 
 
 ### Confustion Matrix
+Confusion Matrix - Multi-Classification
+Positive = Uqniue Cell Type
+Negative = Mixed Cell Type
+
+- True Positive
+  - We predict an cell as a cell in a trajectory and it is that cell type in that trajectory 
+- False Positive
+  - We predict an cell is a type that is not in a trajectory that is its true traj. 
+  - In research, particularly targeted medicine, we would target wrong cell.
+- False Negative
+
+- True Negative
+ 
