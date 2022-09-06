@@ -2,6 +2,15 @@ readme proj file
 
 # ML Project - VAE for Pattern Rec.
 
+Background:
+- Predicting cell lineage patterns in RNAseq measurments.
+
+Project Description: 
+- Using representation learning as low dimentional input to higher dimentional reduction clustering tools like TSNE or UMAP to learn cell lineage. Also evaluate against traditional methods like PCA or Logistic PCA.
+
+Performance Metric:
+- Min{L2-norm/MSE}
+
 ## Description of Metrics:
 
 ### MSE:
