@@ -1,4 +1,6 @@
 ﻿Columns,Desc
+ Variable, RNA Barcode sequence
+ cell.type, types={cycling_capillary, artery_1, capillary, artery_2, vein} 
 Sox17,RNA Gene
 Prex2,RNA Gene
 Terf1,RNA Gene
